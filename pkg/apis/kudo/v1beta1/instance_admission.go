@@ -182,7 +182,7 @@ func (ia *InstanceAdmission) getOperatorVersion(instance *Instance) (ov *Operato
 	return ov, nil
 }
 
-// triggeredPlan determines what plan to run based on params that changed and the related trigger plans.
+// triggeredPlan determines what plan to run based on parameters that changed and the corresponding parameter trigger.
 func triggeredPlan(params []Parameter, ov *OperatorVersion) (*string, error) {
 	// If no parameters were changed, we return an empty string so no plan would be triggered
 	if len(params) == 0 {
